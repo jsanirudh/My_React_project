@@ -1,0 +1,144 @@
+.foodDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+.foodTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.foodImage {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.foodDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foodDetails span {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  display: inline-block;
+}
+
+.foodDetails strong {
+  color: #16a085;
+}
+.ingredientContainer {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ingredientItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Ensures text is centered under the image */
+  padding: 10px;
+  margin: 10px 0; /* Adds vertical spacing between items */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.ingredientItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+  background-color: #f9f9f9; /* Subtle background color change */
+}
+
+.ingredientImage {
+  width: 100px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 8px;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.ingredientImage:hover {
+  transform: rotate(5deg) scale(1.1); /* Adds a playful tilt and scale effect */
+}
+
+.ingredientName {
+  font-size: 1rem;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.ingredientItem:hover .ingredientName {
+  color: #16a085; /* Changes text color on hover */
+}
+
+.instructionContainer {
+  width: 100%;
+  margin-top: 30px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.instructionContainer h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instructionList {
+  list-style-type: decimal; /* Continues to ensure proper numbering */
+  padding-left: 20px; /* Adds spacing for numbers */
+  text-align: justify; /* Justifies text within the list items */
+}
+
+.instructionList li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* Ensures text is justified */
+  hyphens: auto; /* Adds hyphenation to better fit the justified text */
+}
+
+.loadingText {
+  font-size: 1.5rem;
+  color: #3498db;
+  text-align: center;
+  margin-top: 30px;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

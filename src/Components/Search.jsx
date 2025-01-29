@@ -1,11 +1,9 @@
-import React, { use, useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import styles from "./search.module.css"; // Import the styles
 
 export default function Search({ foodData, setFoodData }) {
   const [query, setQuery] = useState("pasta");
-  const URL =
-    "https://api.spoonacular.com/recipes/complexSearch?query=pasta&apiKey=5829276baf2549a293d06679b3055392";
-  //const APIkey = "5829276baf25a4929a3d06679b3055392";
+  const URL = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=5829276baf2549a293d06679b3055392`;
 
   useEffect(() => {
     async function fetchFood() {
@@ -14,15 +12,23 @@ export default function Search({ foodData, setFoodData }) {
       setFoodData(data.results);
     }
     fetchFood();
-  }, [query]);
+  }, [query, setFoodData]);
 
   return (
-    <div>
+    <div className={styles.searchContainer}>
       <input
+        className={styles.searchInput}
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-      ></input>
+        placeholder="Search for recipes"
+      />
+      <button className={styles.searchButton} onClick={() => setQuery(query)}>
+        Search
+      </button>
+      <div className={styles.searchInfo}>
+        Try searching for something like "pasta" or "salad"
+      </div>
     </div>
   );
 }
