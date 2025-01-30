@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./search.module.css"; // Import the styles
+import styles from "./search.module.css";
 
 export default function Search({ foodData, setFoodData }) {
   const [query, setQuery] = useState("pasta");

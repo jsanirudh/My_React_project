@@ -9,7 +9,7 @@ import Nav from "./Components/Nav";
 
 function App() {
   const [foodData, setFoodData] = useState([]);
-  const [foodId, setFoodId] = useState();
+  const [foodId, setFoodId] = useState("650126");
 
   return (
     <div className="App">
