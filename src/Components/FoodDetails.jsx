@@ -27,7 +27,7 @@ export default function FoodDetails({ foodId }) {
         <span>
           <strong>{food.readyInMinutes} Minutes</strong>
         </span>
-        <span className={styles.f}>
+        <span className={food.vegetarian ? styles.veg : styles.nonVeg}>
           <strong>{food.vegetarian ? "Vegetarian" : "Non-Vegetarian"}</strong>
         </span>
         <span>

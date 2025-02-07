@@ -29,17 +29,19 @@
   gap: 20px;
   justify-content: center;
   margin-bottom: 20px;
-}
-
-.foodDetails span {
+  color: #085779;
   font-size: 1.1rem;
-  color: #7f8c8d;
-  display: inline-block;
+}
+.veg {
+  color: #16a085;
+  font-weight: bold;
 }
 
-.foodDetails strong {
-  color: #16a085;
+.nonVeg {
+  color: rgb(171, 3, 3);
+  font-weight: bold;
 }
+
 .ingredientContainer {
   width: 100%;
   margin-top: 30px;
